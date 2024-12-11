@@ -1,0 +1,158 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(41, 40, 40);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden; /* Prevents the entire page from scrolling */
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 20px; /* Adds some margin for better spacing */
+  font-size: 2rem; /* Default heading size */
+}
+
+.result {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: calc(100vh - 100px); /* Adjust the height to prevent overflow */
+  overflow: hidden; /* Ensure only the result container scrolls */
+}
+
+.resultcontainer {
+  height: 100%; /* Keeps your specified height */
+  width: 50%; /* Keeps your specified width */
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  overflow-y: auto; /* Ensures the content scrolls within the container */
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding doesn't affect overall size */
+}
+
+/* Custom scrollbar styles */
+.resultcontainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.resultcontainer::-webkit-scrollbar-track {
+  background: #121212; /* Track color */
+}
+
+.resultcontainer::-webkit-scrollbar-thumb {
+  background: #696868; /* Thumb color */
+}
+
+.resultcontainer::-webkit-scrollbar-thumb:hover {
+  background: #575757; /* Hover color */
+}
+
+#response li {
+  font-weight: 400;
+  font-size: 20px;
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+.inputwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't affect overall size */
+  /* background-color: rgb(192, 185, 185); */
+  margin-bottom: 10px;
+}
+
+input {
+  height: 45px;
+  width: 620px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box; /* Ensures padding doesn't affect overall size */
+}
+
+input::placeholder {
+  color: #535151;
+}
+
+#generate-button,
+#generate-newchat {
+  border-radius: 15px;
+  height: 45px;
+  width: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+#generate-button i,
+#generate-newchat i {
+  font-size: 25px;
+  color: #2a2a33;
+}
+
+#generate-button:hover,
+#generate-newchat:hover {
+  cursor: pointer;
+  background-color: rgb(192, 186, 186);
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 1024px) {
+  .resultcontainer {
+    width: 80%; /* Adjust width for tablets */
+  }
+
+  input {
+    width: 85%; /* Adjust input width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 1.5rem; /* Adjust heading size for mobile devices */
+  }
+
+  #response li {
+    font-size: 16px; /* Adjust response text size for mobile devices */
+  }
+
+  .resultcontainer {
+    width: 95%; /* Adjust width for mobile devices */
+  }
+
+  input {
+    width: 90%; /* Adjust input width for mobile devices */
+    font-size: 16px; /* Adjust input text size for mobile devices */
+  }
+
+  #generate-button,
+  #generate-newchat {
+    width: 45px; /* Adjust button size for mobile devices */
+  }
+}

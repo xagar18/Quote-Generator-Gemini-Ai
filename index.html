@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generative AI Interface</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gemini AI Quote Generator: Inspiring Words at Your Fingertips</h1>
+      <div class="result">
+        <div class="resultcontainer">
+          <ul id="response"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="inputwrapper">
+      <div id="generate-newchat"><i class="ri-add-line"></i></div>
+      <input
+        id="prompt"
+        type="text"
+        placeholder="Enter your quote request here..."
+      />
+      <div id="generate-button"><i class="ri-arrow-right-fill"></i></div>
+    </div>
+    <script type="module" src="sript.js"></script>
+  </body>
+</html>
